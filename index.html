@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luxury 3D Wedding Invitation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" href="style.css">
+
+  <!-- ✅ YAHAN PAR ADD KARNA HAI (IMPORTANT) -->
+
+  <!-- THREE.JS (3D engine) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- GSAP animation library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- GSAP ScrollTrigger plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+</body>
+
+<!-- ========================= -->
+<!-- LOADER -->
+<!-- ========================= -->
+
+<div id="loader">
+    <div class="loaderBox">
+        <div class="ring"></div>
+        <div class="name">💍 Wedding Invitation</div>
+        <div class="sub">Loading beautiful moments...</div>
+    </div>
+</div>
+
+<!-- ========================= -->
+<!-- PROGRESS BAR -->
+<!-- ========================= -->
+
+<div id="progressBar"></div>
+
+<!-- ========================= -->
+<!-- FLOATING HEARTS -->
+<!-- ========================= -->
+
+<div class="hearts">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<!-- ========================= -->
+<!-- FLOWER PETALS -->
+<!-- ========================= -->
+
+<div class="petals">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<!-- ========================= -->
+<!-- PARTICLES -->
+<!-- ========================= -->
+
+<div id="particles"></div>
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+Forever ❤️
+
+</div>
+
+<ul>
+
+<li><a href="#hero">Home</a></li>
+
+<li><a href="#couple">Couple</a></li>
+
+<li><a href="#story">Story</a></li>
+
+<li><a href="#timeline">Timeline</a></li>
+
+<li><a href="#events">Events</a></li>
+
+<li><a href="#countdown">Countdown</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+<li><a href="#rsvp">RSVP</a></li>
+
+</ul>
+
+<div class="menuBtn">
+
+☰
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
+<section id="hero">
+
+<div class="heroOverlay"></div>
+
+<div class="hero-Content glass">
+
+<h3>Together Forever</h3>
+
+<h1>
+
+𝓩𝓾𝓵𝓺𝓪𝓻𝓷𝓪𝓲𝓷 𝓢𝓲𝓴𝓪𝓷𝓭𝓪𝓻
+
+<span>&</span>
+
+𝓚𝓪𝔀𝓪𝓵 𝓐𝓯𝓽𝓪𝓫
+
+</h1>
+
+<p>
+
+Request the honour of your presence
+at our Wedding Ceremony.
+
+</p>
+
+<a href="#events" class="btn">
+
+View Invitation
+
+</a>
+
+</div>
+
+<div class="scrollDown">
+
+↓
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- COUPLE -->
+<!-- ========================= -->
+
+<section id="couple" class="section">
+
+<h2 class="sectionTitle">
+
+Meet The Couple
+
+</h2>
+
+<div class="coupleContainer">
+
+<div class="card glass reveal">
+
+<img src="images/bride.jpg">
+
+<h3>The Bride</h3>
+
+<p>
+
+Elegant, kind and full of dreams.
+
+</p>
+
+</div>
+
+<div class="card glass reveal">
+
+<img src="images/groom.jpg">
+
+<h3>The Groom</h3>
+
+<p>
+
+Strong, caring and deeply in love.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- LOVE STORY -->
+<!-- ========================= -->
+
+<section id="story" class="section">
+
+<h2 class="sectionTitle">
+
+Love Story
+
+</h2>
+
+<div class="storyBox glass reveal">
+
+<p>
+
+Every love story is beautiful,
+but ours is our favourite.
+
+From strangers to soulmates,
+our journey has been filled with
+countless memories,
+beautiful smiles,
+late-night conversations,
+endless prayers,
+and unconditional love.
+
+Now with the blessings of our families,
+we invite you to celebrate
+the beginning of our forever.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- TIMELINE -->
+<!-- ========================= -->
+
+<section id="timeline" class="section">
+
+<h2 class="sectionTitle">
+
+Our Journey
+
+</h2>
+
+<div class="timeline">
+
+<div class="timelineItem left reveal">
+
+<div class="timelineCard glass">
+
+<h3>First Meeting</h3>
+
+<p>
+
+A beautiful beginning.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timelineItem right reveal">
+
+<div class="timelineCard glass">
+
+<h3>Friendship</h3>
+
+<p>
+
+Smiles became memories.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timelineItem left reveal">
+
+<div class="timelineCard glass">
+
+<h3>Engagement</h3>
+
+<p>
+
+Families became one.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timelineItem right reveal">
+
+<div class="timelineCard glass">
+
+<h3>Wedding Day</h3>
+
+<p>
+
+Forever begins.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- EVENTS -->
+<!-- ========================= -->
+
+<section id="events" class="section">
+
+<h2 class="sectionTitle">
+
+Wedding Events
+
+</h2>
+
+<div class="eventGrid">
+
+<div class="eventCard glass reveal">
+
+<h3>Mehndi</h3>
+
+<p>
+
+Friday
+
+</p>
+
+<p>
+
+7:00 PM
+
+</p>
+
+</div>
+
+<div class="eventCard glass reveal">
+
+<h3>Barat</h3>
+
+<p>
+
+Saturday
+
+</p>
+
+<p>
+
+7:30 PM
+
+</p>
+
+</div>
+
+<div class="eventCard glass reveal">
+
+<h3>Walima</h3>
+
+<p>
+
+Sunday
+
+</p>
+
+<p>
+
+1:00 PM
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- COUNTDOWN -->
+<!-- ========================= -->
+
+<section id="countdown" class="section">
+
+<h2 class="sectionTitle">
+
+Countdown
+
+</h2>
+
+<div class="countdown glass">
+
+<div>
+
+<h1 id="days">00</h1>
+
+<p>Days</p>
+
+</div>
+
+<div>
+
+<h1 id="hours">00</h1>
+
+<p>Hours</p>
+
+</div>
+
+<div>
+
+<h1 id="minutes">00</h1>
+
+<p>Minutes</p>
+
+</div>
+
+<div>
+
+<h1 id="seconds">00</h1>
+
+<p>Seconds</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Continued in next part... --><!-- ========================= -->
+<!-- RSVP -->
+<!-- ========================= -->
+
+<section id="rsvp" class="section">
+
+    <h2 class="sectionTitle">
+        RSVP
+    </h2>
+
+    <div class="glass formBox reveal">
+
+        <form id="rsvpForm">
+
+            <input
+                type="text"
+                placeholder="Your Full Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="number"
+                placeholder="Guests"
+                min="1"
+                max="10"
+                required
+            >
+
+            <select required>
+
+                <option value="">
+                    Will you attend?
+                </option>
+
+                <option>
+                    Joyfully Accept
+                </option>
+
+                <option>
+                    Regretfully Decline
+                </option>
+
+            </select>
+
+            <textarea
+                rows="5"
+                placeholder="Leave a Message..."
+            ></textarea>
+
+            <button type="submit" class="btn">
+                Submit RSVP
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- SEATING LOOKUP -->
+<!-- ========================= -->
+
+<section id="seating" class="section">
+
+    <h2 class="sectionTitle">
+
+        Seating Lookup
+
+    </h2>
+
+    <div class="glass seatingBox reveal">
+
+        <input
+            type="text"
+            id="seatSearch"
+            placeholder="Search Your Name..."
+        >
+
+        <div id="seatResult">
+
+            Enter your name to locate your table.
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- GALLERY -->
+<!-- ========================= -->
+
+<section id="gallery" class="section">
+
+    <h2 class="sectionTitle">
+
+        Gallery
+
+    </h2>
+
+    <div class="galleryGrid">
+
+        <div class="galleryItem reveal">
+
+            <img
+                src="images/gallery1.jpg"
+                alt="Wedding Gallery"
+            >
+
+        </div>
+
+        <div class="galleryItem reveal">
+
+            <img
+                src="images/gallery2.jpg"
+                alt="Wedding Gallery"
+            >
+
+        </div>
+
+        <div class="galleryItem reveal">
+
+            <img
+                src="images/gallery3.jpg"
+                alt="Wedding Gallery"
+            >
+
+        </div>
+
+        <div class="galleryItem reveal">
+
+            <img
+                src="images/gallery4.jpg"
+                alt="Wedding Gallery"
+            >
+
+        </div>
+
+        <div class="galleryItem reveal">
+
+            <img
+                src="images/gallery5.jpg"
+                alt="Wedding Gallery"
+            >
+
+        </div>
+
+        <div class="galleryItem reveal">
+
+            <img
+                src="images/gallery6.jpg"
+                alt="Wedding Gallery"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- GOOGLE MAP -->
+<!-- ========================= -->
+
+<section id="map" class="section">
+
+    <h2 class="sectionTitle">
+
+        Venue Location
+
+    </h2>
+
+    <div class="glass mapBox reveal">
+
+        <iframe
+            src="https://www.google.com/maps?q=Badshahi+Mosque+Lahore&output=embed"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- MUSIC PLAYER -->
+<!-- ========================= -->
+
+<div id="musicPlayer" class="glass">
+
+    <button id="musicToggle">
+
+        ▶
+
+    </button>
+
+    <span>
+
+        Romantic Music
+
+    </span>
+
+</div>
+
+<audio
+    id="bgMusic"
+    loop>
+
+    <source
+        src="music/romantic.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+<!-- ========================= -->
+<!-- FLOATING BUTTONS -->
+<!-- ========================= -->
+
+<a
+    href="https://wa.me/923368274407"
+    class="whatsapp"
+    target="_blank">
+
+    💬
+
+</a>
+
+<a
+    href="tel:+923368274407"
+    class="callBtn">
+
+    📞
+
+</a>
+
+<button id="scrollTop">
+
+    ↑
+
+</button>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+    <div class="glass footerBox">
+
+
+        <h2>
+
+            Thank You
+
+        </h2>
+
+        <p>
+
+            We are excited to celebrate
+            our special day with you.
+
+        </p>
+
+        <p>
+
+            Made with ❤️ for our
+            unforgettable wedding.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
