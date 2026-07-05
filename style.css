@@ -1,0 +1,1504 @@
+/*==================================================
+                LUXURY WEDDING WEBSITE
+                    style.css
+==================================================*/
+
+/*=========================
+RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #fff5f8 25%,
+        #f9dce7 50%,
+        #f5c8d8 80%,
+        #FFFDFE 100%
+     );
+
+    color:#4A3A42;
+
+    overflow-x:hidden;
+
+}
+
+/*=========================
+SCROLLBAR
+=========================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0f2027;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background: linear-gradient(180deg, #d4af37, #ff69b4);
+    border-radius:20px;
+
+}
+
+/*=========================
+LOADER
+=========================*/
+
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.loaderBox {
+    text-align: center;
+    padding: 30px 40px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.ring {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.2);
+    border-top: 4px solid #d4af37;
+    margin: 0 auto 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.name {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    margin-top: 8px;
+}
+
+/*=========================
+PROGRESS BAR
+=========================*/
+
+#progressBar{
+
+position:fixed;
+
+top:0;
+left:0;
+
+height:5px;
+
+width:0%;
+
+background:
+
+linear-gradient(
+90deg,
+gold,
+#ffb6c1,
+white
+);
+
+z-index:9999;
+
+}
+
+/*=========================
+SECTION
+=========================*/
+
+.section{
+
+padding:110px 8%;
+
+position:relative;
+
+}
+
+.sectionTitle{
+
+font-size:46px;
+
+text-align:center;
+
+margin-bottom:70px;
+
+color:#b8860b;
+
+font-weight:700;
+
+}
+
+/*=========================
+GLASS
+=========================*/
+
+.glass{
+
+background:rgba(255,255,255,.18);
+
+transform-style:preserve-3d;
+transition:.5s ease;
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.4);
+
+border-radius:30px;
+
+box-shadow:
+
+0 20px 60px
+rgba(0,0,0,.12);
+
+}
+
+/*=========================
+NAVBAR
+=========================*/
+
+header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+z-index:5000;
+
+padding:18px 8%;
+
+transition:.4s;
+
+}
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.logo{
+
+font-size:30px;
+
+font-weight:bold;
+
+color:#b8860b;
+
+}
+
+.navbar ul{
+
+display:flex;
+
+list-style:none;
+
+gap:40px;
+
+}
+
+.navbar a{
+
+text-decoration:none;
+
+color:#444;
+
+font-weight:600;
+
+transition:.4s;
+
+}
+
+.navbar a:hover{
+
+color:#c89b3c;
+
+}
+
+.menuBtn{
+
+display:none;
+
+font-size:32px;
+
+cursor:pointer;
+
+}
+
+/*=========================
+HERO
+=========================*/
+#hero {
+   /* ✅ BACKGROUND IMAGE YAHAN LAGEGI */
+   animation:bgZoom 18s ease-in-out infinite;
+  background: url("images/drive.jpg") center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.heroOverlay{
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.15);
+
+}
+
+.hero-Content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+
+    width:75%;
+    max-width:850px;
+
+    padding:40px;
+
+    background:rgba(255,255,255,.35);
+    backdrop-filter:blur(15px);
+    border:2px solid rgba(255,255,255,.45);
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.18),
+
+    0 0 50px rgba(255,215,0,.18);
+    margin-top:60px;
+    z-index:10;
+}
+
+.hero-Content h3{
+
+color:#D4AF37;
+
+letter-spacing:6px;
+
+font-size:1.7rem;
+
+
+}
+
+.hero-Content h1{
+
+font-size:4.8rem;
+
+font-family:'Great Vibes',cursive;
+
+color:#ffffff;
+text-shadow:
+0 4px 15px rgba(0,0,0,.45),
+0 0 20px rgba(255,182,193,.35);
+
+margin-bottom:15px;
+
+line-height:1.2;
+
+}
+
+.hero-Content h1 span{
+
+color:#d4af37;
+
+}
+
+.hero-Content p{
+
+font-size:1.3rem;
+
+color:#ffffff;
+
+margin-top:15px;
+
+font-weight:500;
+
+letter-spacing:1px;
+
+}
+
+.hero-Content .btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:18px 45px;
+    font-size:20px;
+    font-weight:600;
+    color:#fff;
+    text-decoration:none;
+    background:linear-gradient(135deg,#d4af37,#b8860b);
+    border-radius:50px;
+    box-shadow:0 10px 30px rgba(212,175,55,.4);
+    transition:0.4s ease;
+}
+
+.hero-Content .btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 15px 40px rgba(212,175,55,.6);
+}
+
+.scrollDown{
+
+position:absolute;
+
+bottom:35px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:45px;
+
+animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:
+translate(-50%,0);
+
+}
+
+50%{
+
+transform:
+translate(-50%,15px);
+
+}
+
+}
+
+/*=========================
+COUPLE
+=========================*/
+
+.coupleContainer{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+gap:45px;
+
+}
+
+.card{
+
+padding:35px;
+
+text-align:center;
+
+transition:.5s;
+
+}
+
+.card:hover{
+
+transform:
+
+translateY(-10px)
+rotateY(8deg);
+
+}
+
+.card img{
+    
+    
+transition:.5s;
+transform-style:preserve-3d;
+
+width:100%;
+
+height:480px;
+
+object-fit:cover;
+
+border-radius:25px;
+
+margin-bottom:25px;
+
+}
+.card:hover img{
+    transform:scale(1.05) rotateY(8deg);
+}
+
+.card h3{
+
+font-size:34px;
+
+margin-bottom:15px;
+
+color:#b8860b;
+
+}
+
+.card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+/*=========================
+LOVE STORY
+=========================*/
+
+.storyBox{
+
+padding:60px;
+
+font-size:20px;
+
+line-height:2;
+
+text-align:center;
+
+}/*=========================
+TIMELINE
+=========================*/
+
+.timeline{
+    position:relative;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    transform:translateX(-50%);
+    width:4px;
+    height:100%;
+    background:linear-gradient(to bottom,#d4af37,#ffd700,#fff,#d4af37);
+    box-shadow:0 0 20px rgba(212,175,55,.7);
+}
+
+.timelineItem{
+    width:50%;
+    position:relative;
+    padding:30px 50px;
+}
+
+.timelineItem.left{
+    left:0;
+}
+
+.timelineItem.right{
+    left:50%;
+}
+
+.timelineItem::before{
+    content:"";
+    position:absolute;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:#d4af37;
+    top:45px;
+    box-shadow:0 0 20px gold;
+}
+
+.timelineItem.left::before{
+    right:-11px;
+}
+
+.timelineItem.right::before{
+    left:-11px;
+}
+
+.timelineCard{
+    padding:30px;
+    transition:.5s;
+}
+
+.timelineCard:hover{
+    transform:translateY(-8px) scale(1.03);
+}
+
+.timelineCard h3{
+    color:#b8860b;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.timelineCard p{
+    line-height:1.8;
+}
+
+/*=========================
+EVENTS
+=========================*/
+
+.eventGrid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.eventCard{
+    text-align:center;
+    padding:40px;
+    transition:.5s;
+}
+
+.eventCard:hover{
+    transform:translateY(-10px);
+}
+
+.eventCard h3{
+    font-size:30px;
+    color:#b8860b;
+    margin-bottom:15px;
+}
+
+.eventCard p{
+    font-size:18px;
+    margin:8px 0;
+}
+
+/*=========================
+COUNTDOWN
+=========================*/
+
+.countdown{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    padding:40px;
+}
+
+.countdown div{
+    text-align:center;
+}
+
+.countdown h1{
+    font-size:60px;
+    color:#d4af37;
+}
+
+.countdown p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+/*=========================
+FORM
+=========================*/
+
+.formBox{
+    max-width:700px;
+    margin:auto;
+    padding:40px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+form input,
+form textarea,
+form select{
+    padding:18px;
+    border:none;
+    border-radius:15px;
+    outline:none;
+    font-size:16px;
+    background:rgba(255,255,255,.7);
+}
+
+form textarea{
+    resize:none;
+}
+
+/*=========================
+SEATING
+=========================*/
+
+.seatingBox{
+    max-width:650px;
+    margin:auto;
+    padding:40px;
+    text-align:center;
+}
+
+#seatSearch{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+#seatResult{
+    font-size:22px;
+    color:#b8860b;
+    font-weight:bold;
+}
+
+/*=========================
+GALLERY
+=========================*/
+
+.galleryGrid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.galleryItem{
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.galleryItem img{
+    width:100%;
+    display:block;
+    transition:.7s;
+}
+
+.galleryItem:hover img{
+    transform:scale(1.12);
+}
+
+/*=========================
+MAP
+=========================*/
+
+.mapBox{
+    overflow:hidden;
+    border-radius:25px;
+}
+
+.mapBox iframe{
+    width:100%;
+    height:500px;
+    border:none;
+}
+
+/*=========================
+MUSIC PLAYER
+=========================*/
+
+#musicPlayer{
+    position:fixed;
+    bottom:30px;
+    left:30px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px 25px;
+    z-index:999;
+}
+
+#musicToggle{
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:20px;
+}
+
+/*=========================
+FLOATING BUTTONS
+=========================*/
+
+.whatsapp,
+.callBtn,
+#scrollTop{
+    position:fixed;
+    right:25px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:#fff;
+    font-size:26px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    z-index:999;
+}
+
+.whatsapp{
+    bottom:170px;
+    background:#25D366;
+}
+
+.callBtn{
+    bottom:95px;
+    background:#0077ff;
+}
+
+#scrollTop{
+    bottom:20px;
+    border:none;
+    background:#d4af37;
+    cursor:pointer;
+}
+
+/*=========================
+FOOTER
+=========================*/
+
+footer{
+    padding:70px 8%;
+}
+
+.footerBox{
+    text-align:center;
+    padding:50px;
+}
+
+.footerBox h2{
+    font-size:40px;
+    color:#b8860b;
+    margin-bottom:20px;
+}
+
+.footerBox p{
+    margin:10px 0;
+    line-height:1.8;
+}
+
+/*=========================
+REVEAL ANIMATION
+=========================*/
+
+.reveal{
+    opacity:0;
+    transform:translateY(60px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}/*=========================================
+        FLOATING HEARTS ANIMATION
+=========================================*/
+
+.hearts,
+.petals,
+#particles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.hearts span{
+    position:absolute;
+    bottom:-100px;
+    width:22px;
+    height:22px;
+    background:#ee568e;
+    transform:rotate(45deg);
+    animation:heartFloat linear infinite;
+    opacity:.65;
+}
+
+.hearts span::before,
+.hearts span::after{
+    content:"";
+    position:absolute;
+    width:22px;
+    height:22px;
+    background:#ff6fa5;
+    border-radius:50%;
+}
+
+.hearts span::before{
+    top:-11px;
+    left:0;
+}
+
+.hearts span::after{
+    left:-11px;
+    top:0;
+}
+
+/* Individual Positions */
+
+.hearts span:nth-child(1){left:5%;animation-duration:10s;animation-delay:0s;}
+.hearts span:nth-child(2){left:15%;animation-duration:12s;animation-delay:2s;}
+.hearts span:nth-child(3){left:25%;animation-duration:8s;}
+.hearts span:nth-child(4){left:35%;animation-duration:14s;}
+.hearts span:nth-child(5){left:45%;animation-duration:11s;}
+.hearts span:nth-child(6){left:58%;animation-duration:13s;}
+.hearts span:nth-child(7){left:70%;animation-duration:9s;}
+.hearts span:nth-child(8){left:82%;animation-duration:12s;}
+.hearts span:nth-child(9){left:90%;animation-duration:15s;}
+.hearts span:nth-child(10){left:97%;animation-duration:10s;}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:
+translateY(0)
+rotate(45deg)
+scale(.5);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:.8;
+
+}
+
+100%{
+
+transform:
+translateY(-120vh)
+rotate(405deg)
+scale(1.2);
+
+opacity:0;
+
+}
+
+}
+
+/*=========================================
+        FLOWER PETALS
+=========================================*/
+
+.petals span{
+
+position:absolute;
+
+top:-100px;
+
+width:18px;
+
+height:30px;
+
+background:
+
+linear-gradient(
+180deg,
+#ffd8e6,
+#ffb3c7
+);
+
+border-radius:50% 50% 50% 0;
+
+opacity:.8;
+
+animation:
+petalFall linear infinite;
+
+}
+
+.petals span:nth-child(1){left:8%;animation-duration:12s;}
+.petals span:nth-child(2){left:18%;animation-duration:15s;}
+.petals span:nth-child(3){left:30%;animation-duration:10s;}
+.petals span:nth-child(4){left:42%;animation-duration:13s;}
+.petals span:nth-child(5){left:55%;animation-duration:11s;}
+.petals span:nth-child(6){left:67%;animation-duration:14s;}
+.petals span:nth-child(7){left:78%;animation-duration:12s;}
+.petals span:nth-child(8){left:88%;animation-duration:16s;}
+.petals span:nth-child(9){left:96%;animation-duration:10s;}
+
+@keyframes petalFall{
+
+0%{
+
+transform:
+translateY(-100px)
+rotate(0deg);
+
+}
+
+100%{
+
+transform:
+translateY(120vh)
+translateX(120px)
+rotate(720deg);
+
+}
+
+}
+
+/*=========================================
+        GLOW PARTICLES
+=========================================*/
+
+#particles::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+radial-gradient(#ffd700 1px,transparent 1px),
+radial-gradient(#ffffff 1px,transparent 1px),
+radial-gradient(#ffb6c1 1px,transparent 1px);
+
+background-size:
+
+140px 140px,
+180px 180px,
+220px 220px;
+
+animation:
+
+particleMove 45s linear infinite;
+
+opacity:.5;
+
+}
+
+@keyframes particleMove{
+
+0%{
+
+transform:
+translateY(0);
+
+}
+
+100%{
+
+transform:
+translateY(-250px);
+
+}
+
+}
+
+/*=========================================
+        FADE IN
+=========================================*/
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+}
+
+.hero-Content{
+
+animation:
+fadeUp
+1.2s ease;
+
+}
+
+/*=========================================
+        MOBILE RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+.navbar ul{
+
+display:none;
+
+}
+
+.menuBtn{
+
+display:block;
+
+}
+
+.hero-Content h1{
+
+font-size:54px;
+
+}
+
+.coupleContainer{
+
+grid-template-columns:1fr;
+
+}
+
+.timeline::before{
+
+left:25px;
+
+}
+
+.timelineItem{
+
+width:100%;
+left:0!important;
+padding-left:70px;
+padding-right:20px;
+
+}
+
+.timelineItem::before{
+
+left:14px;
+
+}
+
+.countdown{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.section{
+
+padding:80px 20px;
+
+}
+
+.sectionTitle{
+
+font-size:34px;
+
+}
+
+.hero-Content{
+
+padding:35px 20px;
+
+}
+
+.hero-Content h1{
+
+font-size:42px;
+
+}
+
+.hero-Content h3{
+
+font-size:22px;
+
+}
+
+.hero-Content p{
+
+font-size:17px;
+
+}
+
+.card img{
+
+height:340px;
+
+}
+
+.countdown{
+
+grid-template-columns:1fr 1fr;
+
+gap:15px;
+
+}
+
+.countdown h1{
+
+font-size:42px;
+
+}
+
+.galleryGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.whatsapp,
+.callBtn,
+#scrollTop{
+
+width:52px;
+height:52px;
+font-size:22px;
+
+}
+
+#musicPlayer{
+
+left:15px;
+bottom:15px;
+
+padding:12px 16px;
+
+}
+
+.footerBox{
+
+padding:35px 20px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.hero-Content h1{
+
+font-size:34px;
+
+}
+
+.sectionTitle{
+
+font-size:28px;
+
+}
+
+.countdown{
+
+grid-template-columns:1fr;
+
+}
+
+.storyBox{
+
+padding:30px 20px;
+
+font-size:17px;
+
+}
+
+.card{
+
+padding:20px;
+
+}
+
+.card img{
+
+height:280px;
+
+}
+
+}/* ================================
+   3D CINEMATIC ADD-ONS
+================================== */
+
+/* 3D Canvas Background */
+#three-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+/* Glow Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255,215,0,0.08), transparent);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Floating 3D Depth Layer */
+.depth-layer {
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+
+/* 3D Hover Cards */
+.glass{
+
+transition:.5s ease;
+transform-style:preserve-3d;
+
+}
+
+.glass:hover{
+
+transform:
+translateY(-12px)
+rotateX(8deg)
+rotateY(-8deg)
+scale(1.03);
+
+box-shadow:
+0 30px 70px rgba(0,0,0,.25);
+
+}
+
+/* Hero 3D Text Glow */
+.hero-Content h1{
+
+text-shadow:
+
+0 2px 0 #fff,
+
+0 6px 10px rgba(0,0,0,.3),
+
+0 12px 25px rgba(255,215,0,.35);
+
+}
+
+/* Cursor Glow Effect */
+.cursor-glow {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, gold, transparent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+}
+/*=========================
+LUXURY HANGING LAMPS
+=========================*/
+
+.lamp{
+position:absolute;
+top:-5px;
+width:3px;
+background:rgba(255,255,255,.45);
+transform-origin:top center;
+animation:swing 5s ease-in-out infinite;
+z-index:9998;
+pointer-events:none;
+}
+
+.lamp::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:-48px;
+
+transform:translateX(-50%);
+
+width:38px;
+
+height:48px;
+
+border-radius:50% 50% 45% 45%;
+
+background:radial-gradient(circle,#fff8dc,#ffd700,#c99a00);
+
+box-shadow:
+0 0 20px gold,
+0 0 40px #ffd700,
+0 0 60px rgba(255,215,0,.7);
+
+}
+/*=========================
+3D HERO FLOAT
+=========================*/
+
+.hero-Content{
+
+transform-style:preserve-3d;
+
+perspective:1200px;
+
+animation:heroFloat 6s ease-in-out infinite;
+
+will-change:transform;
+
+}
+
+@keyframes heroFloat{
+
+0%,100%{
+
+transform:
+translate(-50%,-50%)
+rotateX(0deg)
+rotateY(0deg);
+
+}
+
+50%{
+
+transform:
+translate(-50%,-52%)
+rotateX(3deg)
+rotateY(-2deg);
+
+}
+
+}
+
+@keyframes swing{
+
+0%{
+
+transform:rotate(-8deg);
+
+}
+
+50%{
+
+transform:rotate(8deg);
+
+}
+
+100%{
+
+transform:rotate(-8deg);
+
+}
+
+}
+.hero-Content{
+
+transform-style:preserve-3d;
+
+perspective:1200px;
+
+animation:heroFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes heroFloat{
+
+0%,100%{
+
+transform:translate(-50%,-50%) rotateX(0deg);
+
+}
+
+50%{
+
+transform:translate(-50%,-52%) rotateX(4deg);
+
+}
+
+}
+@keyframes bgZoom{
+
+0%,100%{
+
+background-size:100%;
+
+}
+
+50%{
+
+background-size:108%;
+
+}
+
+}
+.hero-Content{
+
+animation:floatHero 5s ease-in-out infinite;
+
+}
+
+@keyframes floatHero{
+
+0%,100%{
+
+transform:
+translate(-50%,-50%);
+
+}
+
+50%{
+
+transform:
+translate(-50%,-53%);
+
+}
+
+}
+/*=========================
+END OF STYLE.CSS
+=========================*/
